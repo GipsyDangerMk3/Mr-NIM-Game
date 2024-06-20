@@ -6,28 +6,28 @@ let currentBalls = randomGenerator ();
 document.querySelector('.numBalls'). textContent = currentBalls;
 
 //Button Clicks
-document.querySelector('.btn1').addEventListener('click', (e) => {
+document.querySelector('.btn1').addEventListener('click', () => {
     currentBalls--;
     document.querySelector('.numBalls'). textContent = currentBalls;
     if (!playerWinCheck()) {
         nimTurn();
     }
 })
-document.querySelector('.btn2').addEventListener('click', (e) => {
+document.querySelector('.btn2').addEventListener('click', () => {
     currentBalls -= 2;
     document.querySelector('.numBalls'). textContent = currentBalls;
     if (!playerWinCheck()) {
         nimTurn();
     }
 })
-document.querySelector('.btn3').addEventListener('click', (e) => {
+document.querySelector('.btn3').addEventListener('click', () => {
     currentBalls -= 3;
     document.querySelector('.numBalls'). textContent = currentBalls;
     if (!playerWinCheck()) {
         nimTurn();
     }
 })
-document.querySelector('.reset').addEventListener('click', (e) => {
+document.querySelector('.reset').addEventListener('click', () => {
     currentBalls = randomGenerator();
     document.querySelector('.numBalls'). textContent = currentBalls;
     document.querySelector('.heading').textContent = "Number of Balls Left";
@@ -85,20 +85,27 @@ function nimWinCheck (){
         console.log("Mr.NIM WINS")
         document.querySelector('.heading').textContent = "YOU LOSE!";
         nimWins++;
-        document.querySelector('.nimWins').textContent = nimWins;
+        document.querySelector('.nimWins').textContent = String(nimWins);
     }
 }
 function playerWinCheck () {
     if (currentBalls === 0) {
         console.log("PLAYER WINS")
         document.querySelector('.heading').textContent = "YOU WIN!";
+        document.querySelector('.message').textContent = "Mr. NIM is sad now...";
         playerWins++;
-        document.querySelector('.playerWins').textContent = playerWins;
+        document.querySelector('.playerWins').textContent =String(playerWins);
+        return true
     } else {
         return false
     }
 }
 //RNG
 function randomGenerator () {
-    return Math.trunc(Math.random() * (21 - 12)) + 12;
+    let startNum = Math.trunc(Math.random() * (21 - 12)) + 12;
+    if (startNum % 4 === 0) {
+        return startNum += 1;
+    } else {
+        return startNum;
+    }
 }
