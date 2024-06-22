@@ -7,15 +7,89 @@
     font-family: "Silkscreen", sans-serif;
     font-weight: 500;
     font-style: normal;
+    color: #9bbc0f;
+    background-color: #0f380f;
+}
+body {
     background-image: url("MrNimBackground.gif");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: auto;
-    color: white;
-    background-color: #0f380f;
 }
 
+div {
+    background-color: #0f380f;
+    border-bottom-style: double;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-top-style: double;
+    border-width: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    margin: 12px auto;
+    padding: 16px;
+}
+.scores {
+    display: inline-block;
+    font-size: 95%;
+}
+.wins, .heading {
+    text-decoration: underline;
+}
+.message{
+    font-size: 70%;
+}
+h1 {
+    font-size: 100px;
+    width: 800px;
+    text-decoration: underline;
+    padding-bottom: 20px;
+}
+button{
+    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+    padding-top: 0;
+    line-height: 1em;
+    text-align: center;
+    font-size: 100%;
+    border-radius: 8px;
+    border-style: outset;
+    border-color: #9bbc0f;
+    border-width: 5px;
+    box-shadow: 0 4px #0f380f;
 
-
+}
+.reset {
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    padding-top: 0;
+    line-height: 1em;
+    text-align: center;
+    font-size: 100%;
+    border-radius: 8px;
+    border-style: outset;
+    border-color: #9bbc0f;
+    border-width: 5px;
+}
+.credits {
+    margin-top: 200px;
+    font-size: 20px;
+}
+button:hover {
+    background-color: #9bbc0f;
+    color: #306230;
+}
+button:active {
+    box-shadow: 0 2px #0f380f;
+    transform: translateY(2px);
+    border-style: inset;
+}
 
