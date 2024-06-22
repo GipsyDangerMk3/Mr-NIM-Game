@@ -7,24 +7,30 @@ document.querySelector('.numBalls'). textContent = currentBalls;
 
 //Button Clicks
 document.querySelector('.btn1').addEventListener('click', () => {
-    currentBalls--;
-    document.querySelector('.numBalls'). textContent = currentBalls;
-    if (!playerWinCheck()) {
-        nimTurn();
+    if (currentBalls !== 0) {
+        currentBalls--;
+        document.querySelector('.numBalls'). textContent = currentBalls;
+        if (!playerWinCheck()) {
+            nimTurn();
+        }
     }
 })
 document.querySelector('.btn2').addEventListener('click', () => {
-    currentBalls -= 2;
-    document.querySelector('.numBalls'). textContent = currentBalls;
-    if (!playerWinCheck()) {
-        nimTurn();
+    if (currentBalls !== 0) {
+        currentBalls -= 2;
+        document.querySelector('.numBalls'). textContent = currentBalls;
+        if (!playerWinCheck()) {
+            nimTurn();
+        }
     }
 })
 document.querySelector('.btn3').addEventListener('click', () => {
-    currentBalls -= 3;
-    document.querySelector('.numBalls'). textContent = currentBalls;
-    if (!playerWinCheck()) {
-        nimTurn();
+    if (currentBalls !== 0) {
+        currentBalls -= 3;
+        document.querySelector('.numBalls'). textContent = currentBalls;
+        if (!playerWinCheck()) {
+            nimTurn();
+        }
     }
 })
 document.querySelector('.reset').addEventListener('click', () => {
@@ -107,5 +113,5 @@ function randomGenerator () {
         return startNum += 1;
     } else {
         return startNum;
-    }
+    } //unsure why the warning is popping up with startNum not being used? totally is being used...
 }

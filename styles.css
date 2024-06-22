@@ -1,11 +1,20 @@
 * {
     margin: 0;
     padding: 0;
+    font-size: 130%;
+
     text-align: center;
     font-family: "Silkscreen", sans-serif;
     font-weight: 500;
     font-style: normal;
-
+    background-image: url("MrNimBackground.gif");
+    backg
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: auto;
+    color: white;
+    background-color: darkgreen;
 }
 
 
